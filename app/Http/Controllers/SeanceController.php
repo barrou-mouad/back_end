@@ -10,7 +10,7 @@ class SeanceController extends Controller
    public function add(Request $req){
        $s=new Seance();
        $s->huere_debut=$req->heure;
-       $s->huere_fin=0;
+    
        $s->module_id=$req->module;
        $s->save();
        return response()->json(array($s->id), 200);
